@@ -1,0 +1,8 @@
+fun main() {
+    val charsArray = mutableListOf<Char>()
+    for (i in 65..90) {
+        charsArray.add(i.toChar())
+    }
+    for (i in charsArray)
+        print("$i\t")
+}
