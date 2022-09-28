@@ -1,0 +1,32 @@
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+    override fun onResume() {
+        super.onResume()
+
+        val poetryString = mutableListOf<String>()
+
+        poetryString.add("Травка зеленеет,")
+        poetryString.add("Солнышко блестит;")
+        poetryString.add("Ласточка с весною")
+        poetryString.add("В сени к нам летит.")
+        poetryString.add("С нею солнце краше")
+        poetryString.add("И весна милей…")
+        poetryString.add("Прощебечь с дороги")
+        poetryString.add("Нам привет скорей!")
+        poetryString.add("Дам тебе я зерен,")
+        poetryString.add("А ты песню спой,")
+        poetryString.add("Что из стран далеких")
+        poetryString.add("Принесла с собой…")
+
+        for (str in poetryString) {
+            Log.i("poetry", str)
+        }
+    }
+}
