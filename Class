@@ -1,0 +1,36 @@
+//---------------------------------------------------------------------------------------
+class PlatAnimal(val name: String, val food: String) {
+    private val animalKind: String  = "платоядное животное"
+    val animalInfo: String = "Меня зовут $name, я $animalKind и я люблю кушать $food"
+}
+//---------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------
+class TravAnimal(val name: String, val food: String) {
+    private val animalKind: String  = "травоядное животное"
+    val animalInfo: String = "Меня зовут $name, я $animalKind и я люблю кушать $food"
+
+}
+//--------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------
+fun main() {
+
+    val lisOfAnimals: MutableList<String> = mutableListOf()
+
+    val dog = PlatAnimal("Жучка", "мясо")
+    val cat = PlatAnimal("Мурка", "рыбу")
+    val cow = TravAnimal("Бурёнка", "траву")
+    val goat = TravAnimal("Цыган", "капусту")
+
+    lisOfAnimals.add(dog.animalInfo)
+    lisOfAnimals.add(cat.animalInfo)
+    lisOfAnimals.add(cow.animalInfo)
+    lisOfAnimals.add(goat.animalInfo)
+
+    for (animal in lisOfAnimals) {
+        println(animal)
+    }
+
+}
+//-----------------------------------------------------------------------------------
